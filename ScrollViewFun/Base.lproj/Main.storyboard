@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,15 +15,64 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-Ve-wKX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-HA-gZ7">
+                                        <rect key="frame" x="0.0" y="0.0" width="3000" height="636"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="rb8-pW-zhd">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="636"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="FQz-60-CXm">
+                                                <rect key="frame" x="600" y="0.0" width="600" height="636"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="phs-By-xhN">
+                                                <rect key="frame" x="1200" y="1" width="600" height="634"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="gYP-yg-P4Y">
+                                                <rect key="frame" x="1800" y="3" width="600" height="630"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="BuD-tX-Keu">
+                                                <rect key="frame" x="2400" y="1" width="600" height="634"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hIh-HA-gZ7" firstAttribute="top" secondItem="Ym6-Ve-wKX" secondAttribute="top" id="9GV-fU-wj3"/>
+                                    <constraint firstAttribute="bottom" secondItem="hIh-HA-gZ7" secondAttribute="bottom" id="G7G-xz-Xpu"/>
+                                    <constraint firstItem="hIh-HA-gZ7" firstAttribute="leading" secondItem="Ym6-Ve-wKX" secondAttribute="leading" id="K04-ac-zfe"/>
+                                    <constraint firstAttribute="trailing" secondItem="hIh-HA-gZ7" secondAttribute="trailing" id="V9j-Du-YoA"/>
+                                    <constraint firstItem="hIh-HA-gZ7" firstAttribute="width" secondItem="Ym6-Ve-wKX" secondAttribute="width" multiplier="5" id="s36-hO-5RE"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ym6-Ve-wKX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="84f-IS-FsU"/>
+                            <constraint firstItem="Ym6-Ve-wKX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hsb-Bb-h1V"/>
+                            <constraint firstItem="Ym6-Ve-wKX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l8d-rS-MDT"/>
+                            <constraint firstItem="Ym6-Ve-wKX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="nE4-AO-D5L"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imagesWithEmotionsScroll" destination="Ym6-Ve-wKX" id="fCX-zZ-hRU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281.5" y="396.5"/>
+            <point key="canvasLocation" x="-137.5" y="421.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
