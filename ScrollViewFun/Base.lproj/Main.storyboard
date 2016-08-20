@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="3000" height="636"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="rb8-pW-zhd">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="636"/>
+                                                <rect key="frame" x="0.0" y="163" width="600" height="310"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="FQz-60-CXm">
                                                 <rect key="frame" x="600" y="0.0" width="600" height="636"/>
